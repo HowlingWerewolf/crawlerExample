@@ -1,0 +1,27 @@
+--------------------------------------------------------
+--  DDL for Table
+--------------------------------------------------------
+
+  CREATE TABLE "LINK" 
+   (	
+    "ID" NUMBER,
+    "TIME" DATE, 
+    "URL" VARCHAR2(4000 BYTE), 
+    "COLLECTEDLINK" VARCHAR2(4000 BYTE) 
+   );
+   
+  CREATE TABLE "VISITEDPAGE" 
+   (	
+    "ID" NUMBER,
+    "TIME" DATE, 
+    "URL" VARCHAR2(4000 BYTE)
+   );
+   
+   
+--------------------------------------------------------
+--  DDL for Sequence
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "LINK_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE ;
+   CREATE SEQUENCE  "VISITEDPAGE_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE ;
+
