@@ -1,5 +1,5 @@
 -------------------------------------------
-Oracle driver problem:
+Oracle driver problem (http://stackoverflow.com/questions/33073773/glassfish-4-1-jpa-hibernate-5-0-2-oracle-12-1-integration-error):
 
 
 [2016-09-27T12:06:34.697+0200] [glassfish 4.1] [SEVERE] [jdbc.ex_connection_holder] [javax.enterprise.resource.resourceadapter.com.sun.gjc.spi] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1474970748179] [timeMillis: 1474970794697] [levelValue: 1000] [[
@@ -66,5 +66,11 @@ Caused by: java.lang.IllegalAccessException: Class com.sun.gjc.util.MethodExecut
 Hibernate inserts negative ids to DB
 
 ID sequence defined with min value 1, but i experienced that ID fields was inserted with negative values.
+
+-------------------------------------------
+
+
+-------------------------------------------
+Hibernate inserts duplicate ids to DB
 
 -------------------------------------------
