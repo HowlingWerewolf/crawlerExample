@@ -24,7 +24,7 @@ public class CrawlLinksToDBApplication {
     		
     		try {	
     			// insert 
-    	        SessionHelper.insert(page);
+//    	        SessionHelper.insert(page);
     	        
 //    	        // select
 //    	        List<Page> list = (List<Page>) SessionHelper.query("FROM Page");
@@ -45,7 +45,7 @@ public class CrawlLinksToDBApplication {
 		
 		try {	
 			// insert 
-	        SessionHelper.insert(visitedpage);	        
+//	        SessionHelper.insert(visitedpage);	        
 		} catch (Exception e) {
 			e.printStackTrace();
 		}	

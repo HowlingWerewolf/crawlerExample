@@ -1,5 +1,15 @@
-<persistence-unit name="testPU">
-  <properties>
-    <property name="hibernate.id.new_generator_mappings" value="true" />
-  </properties>
-</persistence-unit>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="crawlLinksToDBPU" transaction-type="JTA">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<jta-data-source>jdbc/crawlLinksToDB</jta-data-source>
+		<class>example.crawllinkstodb.model.dao.Link</class>
+		<class>example.crawllinkstodb.model.dao.VisitedPage</class>
+		<properties>
+			<property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.SunOneJtaPlatform" />
+			<property name="hibernate.id.new_generator_mappings" value="true" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
+		</properties>
+	</persistence-unit>
+</persistence>

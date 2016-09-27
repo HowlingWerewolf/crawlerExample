@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>example.crawlLinksToDB</groupId>
-	<artifactId>crawlLinksToDB</artifactId>
-	<packaging>jar</packaging>
+	<artifactId>crawlLinksToDB_war</artifactId>
+	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>crawlLinksToDB</name>
+	<name>crawlLinksToDB_war</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
 		<dependency>
@@ -19,17 +19,57 @@
 			<version>5.2.2.Final</version>
 		</dependency>
 		<dependency>
+			<groupId>javax.ejb</groupId>
+			<artifactId>ejb-api</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
 			<groupId>addJarToEclipse</groupId>
-			<artifactId>ojdbc6.jar</artifactId>
+			<artifactId>ojdbc7.jar</artifactId>
 			<version>1.0</version>
 			<scope>system</scope>
-			<systemPath>${basedir}/lib/ojdbc6.jar</systemPath>
+			<systemPath>${basedir}/lib/ojdbc7.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-api</artifactId>
+			<version>2.1.7</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-impl</artifactId>
+			<version>2.1.7</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.el</groupId>
+			<artifactId>el-ri</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>6.0</version>
 		</dependency>
 	</dependencies>
 	<build>
@@ -55,17 +95,14 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
 				<configuration>
-					<archive>
-						<manifest>
-							<addClasspath>true</addClasspath>
-							<mainClass>example.crawllinkstodb.app.CrawlLinksToDBApplication</mainClass>
-						</manifest>
-					</archive>
+					<source>1.7</source>
+					<target>1.7</target>
 				</configuration>
 			</plugin>
-		</plugins>		
+		</plugins>
 		<resources>
 			<resource>
 				<filtering>false</filtering>
