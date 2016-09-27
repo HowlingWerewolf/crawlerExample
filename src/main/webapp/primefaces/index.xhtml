@@ -4,9 +4,10 @@
 <h:head>
 </h:head>
 <h:body>
-    <h1>index</h1>
-    <h:outputLink value="logout">logout</h:outputLink>
-
-    <p:editor value="&lt;b&gt;primefaces"/>
+	<h3>Web Crawler Example</h3>
+	<h:form>
+		<h:inputText value="#{crawlerBean.url}"></h:inputText>
+		<h:commandButton value="Crawl!" action="aftercrawl"></h:commandButton>
+	</h:form>
 </h:body>
 </html>
