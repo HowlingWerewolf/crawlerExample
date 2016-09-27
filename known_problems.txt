@@ -63,3 +63,8 @@ Caused by: java.lang.IllegalAccessException: Class com.sun.gjc.util.MethodExecut
 ]]
 
 -------------------------------------------
+Hibernate inserts negative ids to DB
+
+ID sequence defined with min value 1, but i experienced that ID fields was inserted with negative values.
+
+-------------------------------------------
