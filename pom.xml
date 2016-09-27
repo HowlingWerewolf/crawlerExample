@@ -24,11 +24,9 @@
 			<version>3.0</version>
 		</dependency>
 		<dependency>
-			<groupId>addJarToEclipse</groupId>
-			<artifactId>ojdbc7.jar</artifactId>
-			<version>1.0</version>
-			<scope>system</scope>
-			<systemPath>${basedir}/lib/ojdbc7.jar</systemPath>
+			<groupId>com.oracle.jdbc</groupId>
+			<artifactId>ojdbc7</artifactId>
+			<version>12.1.0.2</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -72,6 +70,33 @@
 			<version>6.0</version>
 		</dependency>
 	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>maven.oracle.com</id>
+			<name>oracle-maven-repo</name>
+			<url>https://maven.oracle.com</url>
+			<layout>default</layout>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</releases>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>maven.oracle.com</id>
+			<name>oracle-maven-repo</name>
+			<url>https://maven.oracle.com</url>
+			<layout>default</layout>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</releases>
+		</pluginRepository>
+	</pluginRepositories>
+	
 	<build>
 		<plugins>
 			<plugin>
