@@ -21,14 +21,14 @@ public class HelloBean implements Serializable {
     
 	private String name;
 
-	public String getName() {
-		VisitedPage page = new VisitedPage(name);
-		page.setTime(new Date());
-		service.save(page);		   
+	public String getName() {	   
 		return name;
 	}
 
 	public void setName(String name) {
+		VisitedPage page = new VisitedPage(name);
+		page.setTime(new Date());
+		service.save(page);	
 		this.name = name;
 	}
 
