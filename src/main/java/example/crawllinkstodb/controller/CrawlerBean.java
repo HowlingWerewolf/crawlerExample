@@ -45,7 +45,7 @@ public class CrawlerBean implements Serializable {
 		List<Link> linkList = linkService.list();
 		StringBuilder sb = new StringBuilder();
 		for (Link link : linkList) {
-			sb.append(link.getCollectedLink() + " \n /n");
+			sb.append(link.getCollectedLink() + " \n");
 		}
 		setCrawlResult(sb.toString());
 		return crawlResult;
