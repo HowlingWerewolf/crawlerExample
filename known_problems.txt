@@ -63,14 +63,18 @@ Caused by: java.lang.IllegalAccessException: Class com.sun.gjc.util.MethodExecut
 ]]
 
 -------------------------------------------
+SOLVED 
 Hibernate inserts negative ids to DB
 
 ID sequence defined with min value 1, but i experienced that ID fields was inserted with negative values.
 
+Solution: http://stackoverflow.com/questions/9861416/hibernate-generates-negative-id-values-when-using-a-sequence
+
 -------------------------------------------
 
 
 -------------------------------------------
+SOLVED
 Hibernate inserts duplicate ids to DB
 
 -------------------------------------------

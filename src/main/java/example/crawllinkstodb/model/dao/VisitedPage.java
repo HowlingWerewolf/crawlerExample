@@ -16,7 +16,7 @@ public class VisitedPage {
 
 	@Id
 	@GeneratedValue(generator = "VISITEDPAGE_SEQ", strategy = GenerationType.IDENTITY)
-	@SequenceGenerator(name = "VISITEDPAGE_SEQ", sequenceName = "VISITEDPAGE_SEQ")
+	@SequenceGenerator(name = "VISITEDPAGE_SEQ", sequenceName = "VISITEDPAGE_SEQ", allocationSize = 1, initialValue = 1)
 	@Column(name = "ID")
 	private int id;	
 
